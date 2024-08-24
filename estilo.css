@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/* Fonte */
+@font-face {
+    font-family: 'ethnocentric';
+    src: url('fontes/ethnocentric\ rg\ it.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Configurações globais */
+*{
+    font-family: 'ethnocentric';
+    font-weight: normal;
+    font-size: 20pt;
+    background-color: #3a3939;
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url(Tela_de_fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Div geral */
+div{
+    background-color: #27272700;
+    color: white;
+    padding: 3px;
+    box-sizing: border-box;
+}
+/* Div relógio geral */
+div#relogio-geral{
+    background-color: #272727b9;
+    width: 600px;
+    border-radius: 15px;
+    padding: 10px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: #00000079 4px 4px 4px;
+    
+}
+
+/* Div dia da semana */
+div#diaSem{
+    display: block;
+    text-align: center;
+    font-size: 50pt;
+}
+/* Div dia do mês, mês e ano */
+div#diaMes{
+    display: block;
+    text-align: center;
+    font-size: 15pt;
+    padding-bottom: 10px;
+}
+/* Div relógio */
+div#relogio{
+    text-align: center;
+    display: block;
+    width: 580px;
+    height: 255px;
+    padding-top: 5px;
+    margin: 0px;
+}
+/* Div horas */
+div#ihora{
+    background-color: #1d1c1c;
+    width: 180px;
+    height: 250px;
+    display: inline-block;
+    font-size: 35pt;
+    line-height: 240px;
+    border-radius: 15px;
+}
+/* Div minutos */
+div#imin{
+    background-color: #1d1c1c;
+    width: 180px;
+    height: 250px;
+    display: inline-block;
+    font-size: 35pt;
+    line-height: 240px;
+    border-radius: 15px;
+}
+/* Div segundos */
+div#iseg{
+    background-color: #1d1c1c;
+    width: 180px;
+    height: 250px;
+    display: inline-block;
+    font-size: 35pt;
+    line-height: 240px;
+    border-radius: 15px;
+}
+
+div#backgroundblur{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #00000030;
+    backdrop-filter:blur(10px);
+}

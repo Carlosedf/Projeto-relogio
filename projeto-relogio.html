@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto relógio</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <div id="backgroundblur"></div>
+
+    <div id="relogio-geral">
+        <div id="diaSem">Dia da semana</div>
+        <div id="diaMes">Dia do mês, Mês, Ano</div>
+        <div id="relogio">
+            <div id="ihora">Hora</div>
+            <div id="imin">Minuto</div>
+            <div id="iseg">Segundo</div>
+        </div>
+    </div>
+
+
+    <script>
+
+        function Atualizarhora(){
+          // Dia da semana
+                var diaSemana = window.document.querySelector('div#diaSem')
+                var Dsemana = new Date()
+                DSemana = Dsemana.getDay()
+
+                // Converter dia da semana
+                switch (DSemana) {
+                    case 0:
+                        diaSemana.innerHTML = ('Domingo')
+                        break
+                    case 1:
+                        diaSemana.innerHTML = ('Domingo')
+                        break
+                    case 2:
+                        diaSemana.innerHTML = ('Domingo')
+                        break
+                    case 3:
+                        diaSemana.innerHTML = ('Domingo')
+                        break
+                    case 4:
+                        diaSemana.innerHTML = ('Domingo')
+                        break
+                    case 5:
+                        diaSemana.innerHTML = ('Domingo')
+                        break
+                    case 6:
+                        diaSemana.innerHTML = ('Domingo')
+                        break
+                    default:
+                        diaSemana.innerHTML = ('Erro')
+                }
+
+                // Dia do mês
+                var diaMes = window.document.querySelector('div#diaMes')
+                var vdiaMes = new Date()
+                DiaMes = vdiaMes.getUTCDate()
+
+                // Mês
+                var vMes = new Date()
+                Mes = vMes.getMonth()
+
+                // Converter Mês
+                switch (Mes) {
+                    case 0:
+                        mes = ('Janeiro')
+                        break
+                    case 1:
+                        mes = ('Fevereiro')
+                        break
+                    case 2:
+                        mes = ('Março')
+                        break
+                    case 3:
+                        mes = ('Abril')
+                        break
+                    case 4:
+                        mes = ('Maio')
+                        break
+                    case 5:
+                        mes = ('Junho')
+                        break
+                    case 6:
+                        mes = ('Julho')
+                        break
+                    case 7:
+                        mes = ('Agosto')
+                        break
+                    case 8:
+                        mes = ('Setembro')
+                        break
+                    case 9:
+                        mes = ('Outubro')
+                        break
+                    case 10:
+                        mes = ('Novembro')
+                        break
+                    case 11:
+                        mes = ('Dezembro')
+                        break
+                }
+
+
+                // Ano
+                var vAno = new Date()
+                Ano = vAno.getFullYear()
+
+                diaMes.innerHTML = (`${DiaMes}, ${mes}, ${Ano}`)
+
+                // horas
+                var hora = window.document.querySelector('div#ihora')
+                var vhora = new Date()
+                hora.innerHTML = vhora.getHours() + "H"
+
+                // minutos
+                var min = window.document.querySelector('div#imin')
+                var vmin = new Date()
+                min.innerHTML = vmin.getMinutes() + "M"
+
+                // segundos
+                var seg = window.document.querySelector('div#iseg')
+                var vseg = new Date()
+                seg.innerHTML = vseg.getSeconds() + "S"
+
+            }
+
+            setInterval(Atualizarhora, 1000)
+        
+    </script>
+    
+</body>
+</html>
